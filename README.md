@@ -1,5 +1,5 @@
 My styleguides:
-* [CSS](https://github.com/wbrady/styleguide/wiki/CSS-Styleguide)
-* [Markup](https://github.com/wbrady/styleguide/wiki/Markup-Styleguide)
-* [Javascript](https://github.com/wbrady/styleguide/wiki/Javascript-Styleguide)
-* [Ruby](https://github.com/wbrady/styleguide/wiki/Ruby-Styleguide)
+* [CSS](https://github.com/wbrady/styleguide/blob/master/CSS.md)
+* [Markup](https://github.com/wbrady/styleguide/blob/master/Markup.md)
+* [Javascript](https://github.com/wbrady/styleguide/blob/master/Javascript.md)
+* [Ruby](https://github.com/wbrady/styleguide/blob/master/Ruby.md)
