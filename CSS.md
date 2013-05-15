@@ -68,9 +68,25 @@ should be written like this in Stylus
 * Place global states into their own file.
 * State rules made for a specific module should reside with the module rules and not with the global state rules.
 
-## Pixels vs. Ems
-* Use `px` for `font-size`.
+## Units
+* Best practice to establish a base font-size of 100% of what the browser thinks it should be (in case the user has manually set some bigger font size in their browser settings or something).
+
+```css
+body { font-size: 100%; }
+```
+
+* From there its best to use `em` for font size for elements. The following are good defaults for font-size of h* elements ([Reference](http://webdesign.tutsplus.com/articles/typography-articles/taking-the-erm-out-of-ems/?utm_source=feedly&utm_medium=feed&utm_campaign=Feed%3A+webdesigntutsplus+(Webdesigntuts%2B)):
+
+```css
+h1 { font-size: 2.25em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3125em; }
+h4 { font-size: 1.125em; }
+h5 { font-size: 1em; }
+```
+
 * Use unit-less `line-height` because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`. TODO add a link to an article explaining this
+* Never use `px` for line-height
 
 ## Class naming conventions
 * Never reference `js-` prefixed class names from CSS files. `js-` are used exclusively from JS files.
