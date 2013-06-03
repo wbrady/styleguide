@@ -2,7 +2,7 @@
 * [Github's CSS Styleguide](https://github.com/styleguide/css) - I flat out copy a lot of it.
 * [Scalable and Modular Architecture for CSS](http://smacss.com/) by Jonathan Snook.
 * [The Rails View](http://pragprog.com/book/warv/the-rails-view) by John Athayde and Bruce Williams.
-* ["Sass Style Guides" post by Chris Coyier](http://css-tricks.com/sass-style-guide/)
+* [Sass Style Guides](http://css-tricks.com/sass-style-guide/) by Chris Coyier
 
 ## Coding Style
 * Use soft-tabs with a two space indent.
