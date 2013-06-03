@@ -109,10 +109,12 @@ h5 { font-size: 1em; }
 * Use unit-less `line-height` because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the `font-size`. TODO add a link to an article explaining this
 * Never use `px` for line-height
 
-## Class naming conventions
+## Naming
 * Never reference `js-` prefixed class names from CSS files. `js-` are used exclusively from JS files.
 * Use the `is-` prefix for state rules that are shared between CSS and JS.
 * In a case where a state rule is made for a specific module, the state class name should include the module name in it.
+* Use names that are as short as possible but as long as necessary.
+* Concatenate words using `-`.
 
 ## Specificity (classes vs. ids)
 Elements that occur **exactly once** inside a page should use IDS, otherwise, use classes. When in doubt, use a class name.
