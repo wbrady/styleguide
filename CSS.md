@@ -2,6 +2,7 @@
 * [Github's CSS Styleguide](https://github.com/styleguide/css) - I flat out copy a lot of it.
 * [Scalable and Modular Architecture for CSS](http://smacss.com/) by Jonathan Snook.
 * [The Rails View](http://pragprog.com/book/warv/the-rails-view) by John Athayde and Bruce Williams.
+* ["Sass Style Guides" post by Chris Coyier](http://css-tricks.com/sass-style-guide/)
 
 ## Coding Style
 * Use soft-tabs with a two space indent.
@@ -42,9 +43,29 @@ Here is a good example
 }
 ```
 
-## SCSS, LESS, Stylus
+## Preprocessors
+
+### General Rules
+* As a rule of thumb, don't nest futher than 3 levels deep and 50 lines long. If you find yourself going further, think about reorganizing your rules (either the specificity needed, or the layout of the nesting).
+* All vendor prefixes use `@mixins`.
+* Compile compressed in deployment.
+* Don't commit .css files.
+* Any value used more than once should probably be in a variable.
+* Name media queries that occur at globally known points (most media queries). For example if your page width is 1100px, rather than every media query across your modules being written as `@media screen and max-width(110px)` or even `@media screen and max-width($page-width)`, you should create a mixin called `page-width`. Then you could write `@include page-width {}` everywhere.
+
+### Ordering
+* List `@extend(s)` first
+* List regular styles and `@include(s)` next the same order as normal CSS
+* List sibling selectors next (i.e. starting with an `&`)
+* List nested selectors last
+
+<!-- TODO: Add example of ordering -->
+
+### File Organization
 * Any `$variable` or `@mixin` that is used in more than one file should be put in `globals/`. Others should be put at the top of the file where they're used in.
-* As a rule of thumb, don't nest futher than 3 levels deep. If you find yourself going further, think about reorganizing your rules (either the specificity needed, or the layout of the nesting).
+* Break into as many small files as makes sense.
+* Most variables should go in some kind of global file. There are some cases where you know a variable will only be used in the context that one file represents and can be placed just at the top of that file.
+* Put all colors in a colors file/partial.
 
 ## Stylus
 When using Stylus, do not write the `{`, `:`, or `;` because you don't have to.
